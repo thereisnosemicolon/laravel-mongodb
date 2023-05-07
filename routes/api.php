@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\CarsController;
-use App\Http\Controllers\Api\MotorcyclesController;
-use App\Http\Controllers\Api\VehiclesController;
+use App\Http\Controllers\Api\Cars\PostCarsController;
+use App\Http\Controllers\Api\Motorcycles\PostMotorcyclesController;
+use App\Http\Controllers\Api\Vehicles\ListVehiclesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::middleware('api')->get('/vehicles', [VehiclesController::class, 'list']);
+Route::middleware('api')->get('/vehicles', [ListVehiclesController::class, 'list']);
+Route::middleware('api')->post('/cars', [PostCarsController::class, 'post']);
+Route::middleware('api')->post('/motorcycles', [PostMotorcyclesController::class, 'post']);
 
-Route::resource('cars', CarsController::class);
-Route::resource('motorcycles', MotorcyclesController::class);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
