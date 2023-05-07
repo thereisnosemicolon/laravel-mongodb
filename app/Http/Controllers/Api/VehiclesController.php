@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 class VehiclesController extends Controller
 {
     public function list(){
-        return "Peler";
+        return response()->json(['messages' => csrf_token()]);
+    }
+    public function post(Request $request){
+        return response()->json(['messages' => $request, 'token' => csrf_token()]);
     }
 }

@@ -15,6 +15,10 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->string('mesin', 100);
+            $table->string('tahun_keluaran', 4);
+            $table->string('warna', 20);
+            $table->double('harga', 15, 2);
             $table->timestamps();
         });
     }

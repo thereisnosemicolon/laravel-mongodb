@@ -15,6 +15,9 @@ class CreateMotorcyclesTable extends Migration
     {
         Schema::create('motorcycles', function (Blueprint $table) {
             $table->id();
+            $table->string('mesin', 100);
+            $table->string('tipe_suspensi', 100);
+            $table->string('tipe_transmisi', 100);
             $table->timestamps();
         });
     }
