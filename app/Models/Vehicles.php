@@ -8,5 +8,5 @@ use Jenssegers\Mongodb\Eloquent\Model as EloquentModel;
 class Vehicles extends EloquentModel
 {
     protected $connection = 'mongodb';
-    protected $collection = 'vehicles';
+    protected $collection = 'vehicles_collection';
 }

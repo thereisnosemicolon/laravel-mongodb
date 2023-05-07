@@ -13,12 +13,8 @@ class CreateVehiclesTable extends Migration
      */
     public function up()
     {
-        Schema::create('vehicles', function (Blueprint $table) {
+        Schema::create('vehicles_collection', function (Blueprint $table) {
             $table->id();
-            $table->string('mesin', 100);
-            $table->string('tahun_keluaran', 4);
-            $table->string('warna', 20);
-            $table->double('harga', 15, 2);
             $table->timestamps();
         });
     }
